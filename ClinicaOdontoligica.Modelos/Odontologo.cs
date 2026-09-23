@@ -8,17 +8,12 @@ using System.Threading.Tasks;
 
 namespace ClinicaOdontoligica.Modelos
 {
-    [Table ("pacientes")]
-    public class Pacientes
+    [Table("odontologos")]
+    public class Odontologo
     {
         [Key]
-        [Column("id_paciente")]
-        public int idPaciente { get; set; }
-
-        [Column("dni")]
-        [MaxLength(10)]
-        [Required]
-        public string dni { get; set; }
+        [Column("id_odontologo")]
+        public int idOdontologo { get; set; }
 
         [Column("nombres")]
         [MaxLength(50)]
@@ -30,18 +25,13 @@ namespace ClinicaOdontoligica.Modelos
         [Required]
         public string apellidos { get; set; }
 
-        [Column("fecha_nacimiento")]
+        [Column("registro_medico")]
+        [MaxLength(20)]
         [Required]
-        public DateOnly fechaNacimiento { get; set; }
+        public string registroMedico { get; set; }
 
-        [Column("email")]
-        [MaxLength(25)]
+        [Column("id_especialidad")]
         [Required]
-        public string email { get; set; }
-
-        [Column("telefono")]
-        [MaxLength(10)]
-        [Required]
-        public string telefono { get; set; }
+        public int idEspecialidad { get; set; }
     }
 }
