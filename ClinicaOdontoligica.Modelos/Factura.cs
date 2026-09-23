@@ -12,14 +12,35 @@ namespace ClinicaOdontoligica.Modelos
     internal class Factura
     {
         [Key]
+        [Column("id_factura", TypeName = "Serial")]
         public int idFactura { get; set; }
+
+        [Column("fecha_emision")]
+        [Required]
         public DateTime fechaEmision { get; set; }
+
+        [Column(TypeName = "numeric(10,2)")]
+        [Required]
         public decimal subtotal { get; set; }
+
+        [Column(TypeName = "numeric(10,2)")]
+        [Required]
+        public decimal total { get; set; }
+
+        [Column(TypeName = "numeric(10,2)")]
+        [Required]
         public decimal impuestos { get; set; }
-        public string estadoPado { get; set; } 
+
+        [Column("estado_pago")]
+        [MaxLength(20)]
+        public string estadoPado { get; set; }
 
         // Llave Foránea
+        [ForeignKey("Cita")]
+        [Column("id_cita")]
         public int IdCita { get; set; }
 
+        // Objeto de Navegación
+        public Cita? Cita { get; set; }
     }
 }
