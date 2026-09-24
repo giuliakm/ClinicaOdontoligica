@@ -24,9 +24,10 @@ namespace ClinicaOdontoligica.Modelos
         [Required]
         public decimal costoBase { get; set; }
 
-        [Column("duracion_estimada_minutos")]
+        [Column("duracion_estimada_minutos", TypeName = "timestap")]
         [Required]
-        public TimeOnly duracionEstimadaMinutos { get; set; }   
+        public TimeOnly duracionEstimadaMinutos { get; set; }
 
+        List<DetalleCita>? DetallesCita { get; set; } = new List<DetalleCita>();
     }
 }

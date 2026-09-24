@@ -15,12 +15,10 @@ namespace ClinicaOdontoligica.Modelos
         [Column("id_odontologo")]
         public int idOdontologo { get; set; }
 
-        [Column("nombres")]
         [MaxLength(50)]
         [Required]
         public string nombres { get; set; }
 
-        [Column("apellidos")]
         [MaxLength(50)]
         [Required]
         public string apellidos { get; set; }
@@ -33,5 +31,7 @@ namespace ClinicaOdontoligica.Modelos
         [Column("id_especialidad")]
         [Required]
         public int idEspecialidad { get; set; }
+
+        public List<Cita>? Citas { get; set; } = new List<Cita>();
     }
 }

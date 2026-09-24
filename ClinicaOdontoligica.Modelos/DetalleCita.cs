@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ClinicaOdontoligica.Modelos
 {
     [Table("detallescita")]
-    internal class DetalleCita
+    public class DetalleCita
     {
         [Key]
         [Column("id_detalle_cita", TypeName = "Serial")]
@@ -35,5 +35,7 @@ namespace ClinicaOdontoligica.Modelos
         // Objetos de Nagacion
         public Cita? Cita { get; set; }
         public Tratamiento? Tratamiento { get; set; }
+
+        List<DetalleCita>? DetallesCita { get; set; } = new List<DetalleCita>(); 
     }
 }

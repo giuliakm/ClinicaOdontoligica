@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 namespace ClinicaOdontoligica.Modelos
 {
     [Table("facturas")]
-    internal class Factura
+    public class Factura
     {
         [Key]
         [Column("id_factura", TypeName = "Serial")]
         public int idFactura { get; set; }
 
-        [Column("fecha_emision")]
+        [Column("fecha_emision", TypeName = "date")]
         [Required]
         public DateTime fechaEmision { get; set; }
 

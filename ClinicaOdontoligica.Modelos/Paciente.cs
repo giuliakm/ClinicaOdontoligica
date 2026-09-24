@@ -15,17 +15,14 @@ namespace ClinicaOdontoligica.Modelos
         [Column("id_paciente")]
         public int idPaciente { get; set; }
 
-        [Column("dni")]
         [MaxLength(10)]
         [Required]
         public string dni { get; set; }
 
-        [Column("nombres")]
         [MaxLength(50)]
         [Required]
         public string nombres { get; set; }
 
-        [Column("apellidos")]
         [MaxLength(50)]
         [Required]
         public string apellidos { get; set; }
@@ -34,14 +31,14 @@ namespace ClinicaOdontoligica.Modelos
         [Required]
         public DateOnly fechaNacimiento { get; set; }
 
-        [Column("email")]
         [MaxLength(25)]
         [Required]
         public string email { get; set; }
 
-        [Column("telefono")]
         [MaxLength(10)]
         [Required]
         public string telefono { get; set; }
+
+        public List<Cita>? Citas { get; set; } = new List<Cita>();
     }
 }

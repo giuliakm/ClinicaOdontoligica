@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ClinicaOdontoligica.Modelos
 {
     [Table("recetas")]
-    internal class Receta
+    public class Receta
     {
         [Key]
         [Column("id_receta", TypeName = "Serial")]

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ClinicaOdontoligica.Modelos
 {
     [Table("citas")]
-    internal class Cita
+    public class Cita
     {
         [Key]
         [Column("id_cita", TypeName = "Serial")]       
@@ -44,5 +44,12 @@ namespace ClinicaOdontoligica.Modelos
         public Paciente? Paciente { get; set; }
         public Odontologo? Odontologo { get; set; }
         public Consultorio? Consultorio { get; set; }
+
+
+        public List<Receta>? Recetas { get; set; } = new List<Receta>();
+
+        public List<Factura>? Facturas { get; set; } = new List<Factura>();
+
+        public List<DetalleCita>? DetallesCita { get; set; } = new List<DetalleCita>();
     }
 }
