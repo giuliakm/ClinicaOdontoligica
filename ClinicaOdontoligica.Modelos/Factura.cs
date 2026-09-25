@@ -12,10 +12,10 @@ namespace ClinicaOdontoligica.Modelos
     public class Factura
     {
         [Key]
-        [Column("id_factura", TypeName = "Serial")]
+        [Column("id_factura")]
         public int idFactura { get; set; }
 
-        [Column("fecha_emision", TypeName = "date")]
+        [Column("fecha_emision")]
         [Required]
         public DateTime fechaEmision { get; set; }
 
