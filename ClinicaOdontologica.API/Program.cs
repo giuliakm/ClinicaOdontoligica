@@ -23,8 +23,8 @@ namespace ClinicaOdontologica.API
             // Configure the HTTP request pipeline.
             //if (app.Environment.IsDevelopment())
             //{
-                app.UseSwagger();
-                app.UseSwaggerUI();
+            app.UseSwagger();
+            app.UseSwaggerUI();
             //}
 
             app.UseHttpsRedirection();
@@ -38,4 +38,3 @@ namespace ClinicaOdontologica.API
         }
     }
 }
-// Add_Migration V01   update data base
