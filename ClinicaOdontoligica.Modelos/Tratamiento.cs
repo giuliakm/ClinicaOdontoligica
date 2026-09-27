@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicaOdontoligica.Modelos
+namespace ClinicaOdontologica.Modelos
 {
     [Table ("Tratamientos")]
     public class Tratamiento
@@ -28,6 +28,6 @@ namespace ClinicaOdontoligica.Modelos
         [Required]
         public TimeOnly duracionEstimadaMinutos { get; set; }
 
-        List<DetalleCita>? DetallesCita { get; set; } = new List<DetalleCita>();
+        public List<DetalleCita>? DetallesCita { get; set; } = new List<DetalleCita>();
     }
 }

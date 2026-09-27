@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ClinicaOdontoligica.Modelos;
+using ClinicaOdontologica.Modelos;
 
 [Route("api/[controller]")]
 [ApiController]

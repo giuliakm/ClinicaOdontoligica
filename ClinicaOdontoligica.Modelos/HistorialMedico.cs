@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicaOdontoligica.Modelos
+namespace ClinicaOdontologica.Modelos
 {
     [Table("historialesmedicos")]
     public class HistorialMedico
