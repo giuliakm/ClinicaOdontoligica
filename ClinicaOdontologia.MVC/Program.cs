@@ -1,11 +1,16 @@
 
 using ClinicaOdontologica.Consumer;
 using ClinicaOdontologica.Modelos;
+using Microsoft.EntityFrameworkCore;
 
 CRUD<Cita>.Endpoint = "https://localhost:7244/api/Citas";
 CRUD<Consultorio>.Endpoint = "https://localhost:7244/api/Consultorios";
+CRUD<DetalleCita>.Endpoint = "https://localhost:7244/api/DetallesCitas";
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("ClinicaOdontologicaAPIContext") ?? throw new InvalidOperationException("Connection string 'ClinicaOdontologicaAPIContext' not found.");
+
+builder.Services.AddDbContext<ClinicaOdontologicaAPIContext>(options => options.UseNpgsql(connectionString));
 
 
 // Add services to the container.

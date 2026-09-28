@@ -23,7 +23,7 @@ namespace ClinicaOdontologica.Modelos
         [MaxLength(200)]
         public string observacion { get; set; }
 
-        // Llaves Foraneas
+        // Llaves foráneas
         [ForeignKey("Cita")]
         [Column("id_cita")]
         public int IdCita { get; set; }
@@ -32,10 +32,8 @@ namespace ClinicaOdontologica.Modelos
         [Column("id_tratamiento")]
         public int idTratamiento { get; set; }
 
-        // Objetos de Nagacion
+        // Objetos de navegación
         public Cita? Cita { get; set; }
         public Tratamiento? Tratamiento { get; set; }
-
-        List<DetalleCita>? DetallesCita { get; set; } = new List<DetalleCita>(); 
     }
 }
