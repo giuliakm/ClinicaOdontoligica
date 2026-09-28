@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 CRUD<Cita>.Endpoint = "https://localhost:7244/api/Citas";
 CRUD<Consultorio>.Endpoint = "https://localhost:7244/api/Consultorios";
 CRUD<DetalleCita>.Endpoint = "https://localhost:7244/api/DetallesCitas";
+CRUD<Factura>.Endpoint = "https://localhost:7244/api/Facturas";
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("ClinicaOdontologicaAPIContext") ?? throw new InvalidOperationException("Connection string 'ClinicaOdontologicaAPIContext' not found.");
