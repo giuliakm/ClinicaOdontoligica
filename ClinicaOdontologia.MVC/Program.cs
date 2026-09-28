@@ -3,7 +3,7 @@ using ClinicaOdontologica.Consumer;
 using ClinicaOdontologica.Modelos;
 
 CRUD<Cita>.Endpoint = "https://localhost:7244/api/Citas";
-CRUD<Cita>.Endpoint = "https://localhost:7244/api/Citas";
+CRUD<Consultorio>.Endpoint = "https://localhost:7244/api/Consultorios";
 
 var builder = WebApplication.CreateBuilder(args);
 

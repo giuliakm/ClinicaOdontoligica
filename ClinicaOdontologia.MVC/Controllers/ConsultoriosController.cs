@@ -45,7 +45,7 @@ public class ConsultoriosController : Controller
         catch (Exception ex)
         {
             ModelState.AddModelError("", ex.Message);
-            return View(cita);
+            return View(consultorio);
         }
 
     }
@@ -66,7 +66,7 @@ public class ConsultoriosController : Controller
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public ActionResult Edit(int idconsultorio, Cita consultorio)
+    public ActionResult Edit(int idconsultorio, Consultorio consultorio)
     {
         try
         {
@@ -76,7 +76,7 @@ public class ConsultoriosController : Controller
         catch (Exception ex)
         {
             ModelState.AddModelError("", ex.Message);
-            return View(cita);
+            return View(consultorio);
         }
     }
 
@@ -94,7 +94,7 @@ public class ConsultoriosController : Controller
     // POST: CITAS/Delete/5
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
-    public IActionResult Delete(int idconsultorio, Cita consultorio)
+    public IActionResult Delete(int idconsultorio, Consultorio consultorio)
     {
         try
         {
